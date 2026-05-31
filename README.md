@@ -1,4 +1,4 @@
-# minecraft-concept-to-bbmodel
+# minecraft-ai-generate-bbmodel
 
 Convert text descriptions or reference images into editable Blockbench `.bbmodel` files through a structured asset spec and a deterministic generator.
 
@@ -36,7 +36,7 @@ The important design choice is that Codex should not hand-write `.bbmodel` JSON 
 Clone this repository:
 
 ```bash
-git clone https://github.com/Logeaddd/minecraft-concept-to-bbmodel.git
+git clone https://github.com/Logeaddd/minecraft-ai-generate-bbmodel.git
 ```
 
 Copy the skill folder into your Codex skills directory.
@@ -45,14 +45,14 @@ macOS / Linux:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -r minecraft-concept-to-bbmodel/minecraft-concept-to-bbmodel ~/.codex/skills/
+cp -r minecraft-ai-generate-bbmodel/minecraft-ai-generate-bbmodel ~/.codex/skills/
 ```
 
 Windows PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills"
-Copy-Item -Recurse ".\minecraft-concept-to-bbmodel\minecraft-concept-to-bbmodel" "$env:USERPROFILE\.codex\skills\"
+Copy-Item -Recurse ".\minecraft-ai-generate-bbmodel\minecraft-ai-generate-bbmodel" "$env:USERPROFILE\.codex\skills\"
 ```
 
 Restart Codex so it can discover the skill.
@@ -62,13 +62,13 @@ Restart Codex so it can discover the skill.
 Ask Codex to use the skill:
 
 ```text
-Use minecraft-concept-to-bbmodel to make a cute plush bunny chair for Blockbench.
+Use minecraft-ai-generate-bbmodel to make a cute plush bunny chair for Blockbench.
 ```
 
 or:
 
 ```text
-Use minecraft-concept-to-bbmodel to create an original transforming robot .bbmodel.
+Use minecraft-ai-generate-bbmodel to create an original transforming robot .bbmodel.
 ```
 
 Codex should create a `*.spec.json` file first, then run the generator:
@@ -96,10 +96,10 @@ On success, the generator prints the part count, atlas size, texture count, and 
 ## Repository Layout
 
 ```text
-minecraft-concept-to-bbmodel/
+minecraft-ai-generate-bbmodel/
   LICENSE
   README.md
-  minecraft-concept-to-bbmodel/
+  minecraft-ai-generate-bbmodel/
     SKILL.md
     schema/
       asset_spec.schema.json
@@ -110,7 +110,7 @@ minecraft-concept-to-bbmodel/
       bbmodel_to_spec.py
 ```
 
-The inner `minecraft-concept-to-bbmodel/` folder is the actual Codex skill folder.
+The inner `minecraft-ai-generate-bbmodel/` folder is the actual Codex skill folder.
 
 ## Requirements
 
