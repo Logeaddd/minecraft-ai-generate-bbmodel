@@ -1,9 +1,9 @@
 ---
-name: minecraft-concept-to-bbmodel
-description: Convert a user description or reference image into a Minecraft/Blockbench .bbmodel by first authoring a structured asset spec (intermediate JSON), then running a deterministic generator that emits validated cuboid geometry, hierarchy, UVs, and an optional embedded pixel-art texture. The core capability is the spec schema plus the generator script, NOT AI hand-writing .bbmodel JSON and NOT image generation. Use when the user asks to design or make a Minecraft/Blockbench model from text, images, furniture, props, creatures, or an existing .bbmodel.
+name: minecraft-ai-generate-bbmodel
+description: Convert a text description or reference image into an editable Minecraft/Blockbench .bbmodel by first authoring a structured asset spec JSON, then running a deterministic generator that validates geometry, hierarchy, UVs, texture details, and outputs a clean .bbmodel. Use when the user asks to generate Minecraft models, Blockbench models, bbmodel assets, cuboid furniture, props, creatures, robots, mobs, or convert concepts/images into .bbmodel files.
 ---
 
-# Minecraft Concept To BBModel
+# Minecraft AI Generate BBModel
 
 ## Core principle
 
@@ -37,7 +37,6 @@ bottom section); it never feeds geometry.
 - `scripts/generate_bbmodel.py` — deterministic generator + 3 validation layers.
 - `scripts/bbmodel_to_spec.py` — reverse a `.bbmodel` back into an editable spec (for iterating on existing models).
 - `presets/archetypes.json` — proportion anchors per archetype (quadruped, humanoid, furniture_block, item_simple).
-- `examples/rabbit.spec.json`, `examples/oak_stool.spec.json` — worked specs.
 
 ## Workflow
 

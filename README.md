@@ -45,14 +45,14 @@ macOS / Linux:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -r minecraft-ai-generate-bbmodel/minecraft-ai-generate-bbmodel ~/.codex/skills/
+cp -r minecraft-ai-generate-bbmodel ~/.codex/skills/
 ```
 
 Windows PowerShell:
 
 ```powershell
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills"
-Copy-Item -Recurse ".\minecraft-ai-generate-bbmodel\minecraft-ai-generate-bbmodel" "$env:USERPROFILE\.codex\skills\"
+Copy-Item -Recurse ".\minecraft-ai-generate-bbmodel" "$env:USERPROFILE\.codex\skills\"
 ```
 
 Restart Codex so it can discover the skill.
@@ -99,18 +99,17 @@ On success, the generator prints the part count, atlas size, texture count, and 
 minecraft-ai-generate-bbmodel/
   LICENSE
   README.md
-  minecraft-ai-generate-bbmodel/
-    SKILL.md
-    schema/
-      asset_spec.schema.json
-    presets/
-      archetypes.json
-    scripts/
-      generate_bbmodel.py
-      bbmodel_to_spec.py
+  SKILL.md
+  schema/
+    asset_spec.schema.json
+  presets/
+    archetypes.json
+  scripts/
+    generate_bbmodel.py
+    bbmodel_to_spec.py
 ```
 
-The inner `minecraft-ai-generate-bbmodel/` folder is the actual Codex skill folder.
+The repository root is the actual Codex skill folder.
 
 ## Requirements
 
